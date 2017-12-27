@@ -1,9 +1,36 @@
+$white:                           #ffffff;
+$black:                           #000000;
+$dark:                            #484848;
+$primary:                         #4285f4;
+$secondary:                       #34a853;
+$tertiary:                        #fbbc05;
+$quaternary:                      #ea4335;
+$border:                          #e8e8e8;
+$background:                      #f0f3f5;
+$facebook:                        #3b5998;
+
 body {
   font-family: 'Montserrat', sans-serif;
+  color: $dark;
+  font-size: 14px;
+  line-height: 1.43;
+  font-weight: 300;
 }
 
 
 /* Container */
 .container {
   width: 98%;
+}
+
+
+/* Navbar */
+.navbar {
+  background-color: $white;
+}
+
+.navbar li {
+  color: $dark;
+  font-size: 0.95em;
+  font-weight: 300;
 }
