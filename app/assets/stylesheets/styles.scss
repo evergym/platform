@@ -15,12 +15,13 @@ body {
   font-size: 14px;
   line-height: 1.43;
   font-weight: 300;
+  letter-spacing: 0.25px;
 }
 
 
 /* Container */
 .container {
-  width: 98%;
+  width: 95%;
 }
 
 
@@ -29,8 +30,201 @@ body {
   background-color: $white;
 }
 
-.navbar li {
-  color: $dark;
-  font-size: 0.95em;
+.navbar .navbar-nav li a {
+  color: $dark !important;
+  font-size: 0.9em;
   font-weight: 300;
+}
+
+.navbar .navbar-brand {
+  font-weight: 600;
+}
+
+
+/* Buttons */
+.btn.btn-submit {
+  height: 3.0em;
+  border-radius: 0.25rem;
+  font-size: 17px;
+  background-color: $primary !important;
+  color: $white;
+  padding: 10px 25px 10px 25px;
+}
+
+
+/* Panel */
+.panel.panel-default {
+  border-radius: 0.25rem;
+}
+
+
+/* FORMS */
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-control {
+  border-radius: 0.25rem;
+  height: 4rem;
+}
+
+.form-group input {
+  height: 45px;
+  border: 1px solid $border;
+}
+
+.form-group textarea {
+  border: 1px solid $border;
+}
+
+.form-group input[type="radio"] {
+  height: 15px;
+  margin-right: 10px;
+}
+
+.btn-group label {
+  margin-right: 15px;
+}
+
+.form-group select {
+  width: 100%;
+  color: #565a5c;
+  background-color: white;
+  border: 1px solid $border;
+  border-radius: 2px;
+  padding: 10px;
+  appearance: none;
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari & Chrome */
+}
+
+.select:before {
+  content: '\25bc';
+  font-size: 1.2em;
+  position: absolute;
+  color: $border;
+  top: 35px;
+  right: 30px;
+  transform: scale(0.94, 0.62);
+}
+
+.form-group input[type="checkbox"] {
+  height: 1.25em;
+  width: 1.25em;
+  margin-bottom: -0.25em;
+  margin-right: 5px;
+  vertical-align: top;
+  border: 1px solid $border;
+  border-radius: 2px;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.form-group input[type="checkbox"]:checked:before {
+  content: '\2713';
+  position: absolute;
+  text-align: center;
+  width: 1.25em;
+}
+
+
+/* Input */
+input[type="text"], input[type="email"], input[type="password"], textarea {
+  width: 100%;
+  max-width: 100%;
+  height: 3.5em;
+  border: 1px solid $border;
+  border-radius: 0.25rem !important;
+  padding: 0.5em;
+  box-shadow: none;
+  letter-spacing: 0.5px;
+}
+
+textarea {
+  min-height: 10em;
+  box-shadow: none !important;
+  border: 1px solid $border !important;
+}
+
+input[type="submit"], .button {
+  outline: none;
+  background: $primary;
+  border: 2px solid $primary;
+  border-radius: 0.25rem;
+  width: auto;
+  height: 3em;
+  text-align: center;
+  color: $white;
+  text-decoration: none;
+  padding: 1em 2em;
+  &:hover {
+      border: 2px solid $primary;
+      background: $primary;
+      color: $white;
+  }
+}
+
+textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus, select:focus {
+  border: 1px solid $secondary !important;
+  box-shadow: none !important;
+  outline: 0 none;
+  background-color: $white;
+}
+
+label {
+  color: $dark;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+select {
+  width: 100%;
+  max-width: 100%;
+  height: 3em;
+  border: 1px solid $border;
+  border-radius: 0.25rem !important;
+  padding: 0.5em;
+  box-shadow: none;
+  letter-spacing: 0.5px;
+  padding: 0.5em 0.5em;
+  margin: .25em 0 .25em 0;
+  background-color: $white;
+  box-shadow: none;
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+}
+
+.select:before {
+  content: '\25bc';
+  position: absolute;
+  color: $dark;
+  top: 40px;
+  right: 30px;
+  transform: scale(0.84, 0.42);
+}
+
+input[type="checkbox"] {
+  height: 1.25em;
+  width: 1.25em;
+  margin-bottom: -0.25em;
+  margin-right: 5px;
+  vertical-align: top;
+  border: 1px solid $border;
+  border-radius: 0.25rem;
+  appearance: none;
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+}
+
+input[type="checkbox"]:checked:before {
+  content: "\2714";
+  position: absolute;
+  text-align: center;
+  width: 1.25em;
+  color: $primary;
+}
+
+.input-group .form-control {
+    margin: 0px !important;
 }
