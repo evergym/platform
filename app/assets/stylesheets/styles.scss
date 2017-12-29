@@ -53,9 +53,34 @@ body {
 }
 
 
+/* Alert */
+.alert {
+  border-radius: 0px;
+}
+
+.alert {
+  text-align: center;
+  margin-bottom: 0px;
+  list-style: none;
+  border: none;
+}
+
+.alert.devise{
+  text-align: center;
+  margin-bottom: 20px;
+  list-style: none;
+  border: 2px solid $primary;
+  border-radius: 3px;
+}
+
+
 /* Container */
 .container {
   width: 90%;
+}
+
+.container.content {
+  padding-top: 50px;
 }
 
 
@@ -72,12 +97,45 @@ body {
   color: $dark !important;
   font-size: 0.9em;
   font-weight: 300;
+  margin-top: 8px !important;
 }
 
 .navbar-default .navbar-brand {
   color: $primary;
   font-weight: 600;
   letter-spacing: 0.5px;
+  margin-top: 8px;
+  
+  &:hover {
+    color: $primary;
+  }
+}
+
+.dropdown-menu > li > a:hover {
+  background-color: $white;
+  background-image: none;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: $black;
+  margin-top: 10px;
+  margin-bottom: -5px;
+}
+
+.navbar-default .navbar-toggle {
+  border-radius: 0px;
+  border: none;
+} 
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: $white;
+}
+
+.navbar .navbar-nav > li.open > a:hover,
+.navbar .navbar-nav > li.open > a:focus,
+.navbar .navbar-nav > li.open > a:active {
+  background-color: $white;
 }
 
 
@@ -110,7 +168,7 @@ body {
 
 /* Avatar */
 .avatar-small {
-  width: 30px;
+  width: 35px;
   border: 2px solid $border;
 }
 
@@ -126,8 +184,12 @@ body {
   width: 100%;
 }
 
+.navatar {
+  margin-top: -8px;
+}
 
-/* FORMS */
+
+/* Forms */
 .form-group {
   margin-bottom: 25px;
 }
