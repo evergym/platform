@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">evergym</a>
+      <%= link_to "evergym", root_path, class: "navbar-brand" %>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
 
@@ -22,15 +22,21 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"
                   role="button" aria-haspopup="true" aria-expanded="false">
-                  <%= current_user.fullname %> <span class="caret"></span>
+                  <%= image_tag avatar_url(current_user), class: "img-circle avatar-small" %>
             </a>
             <ul class="dropdown-menu">
+              <li><%= link_to "Edit Profile", edit_user_registration_path %>
+              </li>
+              <hr>
               <li><a href="#">Manage Listings</a></li>
+              <hr>
               <li><a href="#">List Your Space</a></li>
+              <hr>
               <li><a href="#">Your Reservations</a></li>
+              <hr>
               <li><a href="#">Your Bookings</a></li>
-              <li role="separator" class="divider"></li>
-              <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+              <hr>
+              <li></li>
               <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
             </ul>
           </li>

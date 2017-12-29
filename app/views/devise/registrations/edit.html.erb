@@ -7,60 +7,70 @@
     <div class="panel panel-default">
       <div class="panel-heading">Required</div>
       <div class="container">
-
-        <br>
-        <br>
+        <div class="panel-body">
+          <br>
+          <br>
         
-        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-          <%= devise_error_messages! %>
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+            <%= devise_error_messages! %>
 
-          <div class="form-group">
-            <div class="row">
-              <div class="col-xs-3" style="margin-top: 15px;">
-                Name
-              </div>
-              <div class="col-xs-9">
-                <%= f.text_field :fullname, :placeholder => "Name", class: "form-control" %>
+            <div class="form-group">
+              <div class="row">
+                <div class="col-xs-3" style="margin-top: 15px;">
+                  Name
+                </div>
+                <div class="col-xs-9">
+                  <%= f.text_field :fullname, :placeholder => "Name", class: "form-control" %>
+                </div>
               </div>
             </div>
-          </div>
-          
-          <div class="form-group">
-            <div class="row">
-              <div class="col-xs-3" style="margin-top: 15px;">
-                Email 
-              </div>
-              <div class="col-xs-9">
-                <%= f.email_field :email, class: "form-control" %>
+
+            <div class="form-group">
+              <div class="row">
+                <div class="col-xs-3" style="margin-top: 15px;">
+                  Email 
+                </div>
+                <div class="col-xs-9">
+                  <%= f.email_field :email, class: "form-control" %>
+                </div>
               </div>
             </div>
-          </div>
 
-          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-            <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-          <% end %>
-
-          <div class="field">
-            <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-            <%= f.password_field :password, autocomplete: "off" %>
-            <% if @minimum_password_length %>
-              <br />
-              <em><%= @minimum_password_length %> characters minimum</em>
+            <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+              <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
             <% end %>
-          </div>
 
-          <div class="field">
-            <%= f.label :password_confirmation %><br />
-            <%= f.password_field :password_confirmation, autocomplete: "off" %>
-          </div>
+            <div class="field">
+              <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+              <%= f.password_field :password, autocomplete: "off" %>
+              <% if @minimum_password_length %>
+                <br />
+                <em><%= @minimum_password_length %> characters minimum</em>
+              <% end %>
+            </div>
 
-          <div class="field">
-            <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-            <%= f.password_field :current_password, autocomplete: "off" %>
-          </div>
-          
-          <br><br>       
+            <div class="field">
+              <%= f.label :password_confirmation %><br />
+              <%= f.password_field :password_confirmation, autocomplete: "off" %>
+            </div>
+
+            <div class="field">
+              <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+              <%= f.password_field :current_password, autocomplete: "off" %>
+            </div>
+
+            <br><br>       
+
+        </div>
+      </div> 
+    </div>
         
+    <br>
+         
+    <div class="panel panel-default">
+      <div class="panel-heading">Optional</div>
+      <div class="panel-body">
+
       </div>
     </div>
           <br>
