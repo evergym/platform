@@ -118,8 +118,8 @@ body {
 
 .navbar-default .navbar-toggle .icon-bar {
   background-color: $black;
-  margin-top: 10px;
-  margin-bottom: -5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .navbar-default .navbar-toggle {
@@ -143,14 +143,44 @@ body {
 .btn.btn-submit {
   height: 3.0em;
   border-radius: 0.25rem;
-  font-size: 17px;
+  font-size: 16px;
+  font-weight: 500;
   background-color: $primary !important;
   color: $white;
-  padding: 10px 25px 10px 25px;
+  padding: 12px 25px 10px 25px;
 }
 
 .btn.btn-save {
   padding: 10px 25px 10px 25px;
+}
+
+.btn.btn-facebook {
+  height: 3.0em;
+  border-radius: 0.25rem;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: $facebook !important;
+  color: $white;
+  padding: 12px 25px 10px 25px;
+}
+
+
+/* Separator */
+.or {
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  color:$dark;
+}
+
+.or:after,
+.or:before {
+    content: "";
+    display: block;
+    background: $border;
+    width: 50%;
+    height:1px;
+    margin: 0 10px;
 }
 
 
