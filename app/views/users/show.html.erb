@@ -18,6 +18,9 @@
       <div class="description row-space-3">
         <%= @user.description %>
       </div>
+      <% if @user == current_user %>
+        <%= link_to "Edit Profile", edit_user_registration_path %>
+      <% end %>
     </div>
   </div>
 </div>

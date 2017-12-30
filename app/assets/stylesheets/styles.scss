@@ -29,6 +29,10 @@ body {
     color: $medium;
   }
   
+  a {
+    color: $secondary;
+  }
+  
   a:link {
     text-decoration: none;
   }
@@ -38,8 +42,8 @@ body {
   }
 
   a:hover {
-    text-decoration: none;
-    color: $light;
+    text-decoration: underline;
+    color: $secondary;
   }
 
   a:active {
@@ -170,6 +174,8 @@ body {
 
 .btn.btn-default {
   border-radius: 0.25rem;
+  font-size: 0.9em;
+  font-weight: 400;
   &:hover {
     background-color: $white;
   }
