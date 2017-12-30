@@ -52,6 +52,10 @@ body {
   }
 }
 
+.text-babu, .icon-babu {
+  color: $primary;
+}
+
 
 /* Alert */
 .alert {
@@ -164,6 +168,13 @@ body {
   padding: 12px 25px 10px 25px;
 }
 
+.btn.btn-default {
+  border-radius: 0.25rem;
+  &:hover {
+    background-color: $white;
+  }
+}
+
 
 /* Separator */
 .or {
@@ -186,7 +197,8 @@ body {
 
 /* Panels */
 .panel.panel-default {
-  border-radius: 0.25rem;
+  border-radius: 0px;
+  box-shadow: none;
   border: 1px solid $border;
   
   .panel-heading {
