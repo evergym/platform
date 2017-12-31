@@ -6,9 +6,9 @@
     <div class="panel panel-default">
       <div class="panel-heading">Amenities</div>
       <div class="panel-body">
+        <br>
         <div class="container">
           <%= form_for @room do |f| %>
-            <label>Amenities</label>
             <div class="row form-group">
               <div class="col-md-4">
                 <%= f.check_box :is_weights %> Free weights / Machines
@@ -29,7 +29,7 @@
                 <%= f.check_box :is_yoga %> Yoga equipment
               </div>
               <div class="col-md-4">
-                <%= f.check_box :is_cycling %> Spin Bikes Available
+                <%= f.check_box :is_cycling %> Spin Bikes
               </div>
             </div>
 
@@ -59,7 +59,7 @@
             <br/><br/>
 
             <div class="text-center">
-              <%= f.submit "Save", class: "btn btn-new" %>
+              <%= f.submit "Save", class: "btn btn-submit" %>
             </div>
           <% end %>
         </div>

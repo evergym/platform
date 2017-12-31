@@ -1,14 +1,14 @@
 $white:                           #ffffff;
 $black:                           #000000;
 $dark:                            #484848;
-$medium:                          #7a8b8e;
+$medium:                          #767676;
 $light:                           #9a9da4;
 $primary:                         #4285f4;
 $secondary:                       #34a853;
 $tertiary:                        #fbbc05;
 $quaternary:                      #ea4335;
 $grey:                            #e8e8e8;
-$border:                          #d3d3d3;
+$border:                          #dce0e0;
 $background:                      #f0f3f5;
 $facebook:                        #3b5998;
 
@@ -18,7 +18,10 @@ body {
   font-size: 14px;
   line-height: 1.43;
   font-weight: 300;
+  background-color: $white;
   letter-spacing: 0.25px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   
   li {
     list-style: none !important;
@@ -39,7 +42,7 @@ body {
   }
 
   a:visited {
-      text-decoration: none;
+    text-decoration: none;
   }
 
   a:hover {
@@ -215,6 +218,13 @@ body {
     width: 50%;
     height:1px;
     margin: 0 10px;
+}
+
+hr {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: 0;
+  border-top: 1px solid $border;
 }
 
 
@@ -423,4 +433,32 @@ input[type="checkbox"]:checked:before {
 
 .input-group .form-control {
     margin: 0px !important;
+}
+
+
+/* SIDEBAR */
+.sidebar-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.sidebar-item {
+  padding: 5px 0;
+  color: $medium;
+}
+
+.sidebar-link {
+  color: $medium;
+  text-decoration: none;
+}
+
+.sidebar-link:hover, .sidebar-link:focus {
+  color: $light;
+  text-decoration: none;
+}
+
+.active.sidebar-link {
+  color: $dark;
+  font-weight: bold;
+  text-decoration: none;
 }
