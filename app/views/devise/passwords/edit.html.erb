@@ -14,13 +14,13 @@
           <%= f.hidden_field :reset_password_token %>
 
         <div class="field">
-          <%= f.password_field :password, autocomplete: "off", :placeholder => "New password", class: "form-control" %>
+          <%= f.password_field :password, autocomplete: "off", :placeholder => "New password", class: "form-control", required: true %>
         </div>
 
         <br>
 
         <div class="field">
-          <%= f.password_field :password_confirmation, autocomplete: "off", :placeholder => "Confirm new password", class: "form-control" %>
+          <%= f.password_field :password_confirmation, autocomplete: "off", :placeholder => "Confirm new password", class: "form-control", required: true %>
         </div>
 
         <br>

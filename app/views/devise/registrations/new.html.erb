@@ -18,19 +18,19 @@
           <br>
 
           <div class="form-group">
-            <%= f.text_field :fullname, :class => "validate", :placeholder => "Name", class: "form-control" %>
+            <%= f.text_field :fullname, :class => "validate", :placeholder => "Name", class: "form-control", required: true %>
           </div>
 
           <br> 
            
           <div class="form-group">
-            <%= f.email_field :email, :placeholder => "Email address", class: "form-control" %>
+            <%= f.email_field :email, :placeholder => "Email address", class: "form-control", required: true %>
           </div>
 
           <br>
 
           <div class="form-group">
-            <%= f.password_field :password, autocomplete: "off", :class => "validate", :placeholder => "Create a password", class: "form-control" %>
+            <%= f.password_field :password, autocomplete: "off", :class => "validate", :placeholder => "Create a password", class: "form-control", required: true %>
           </div>
 
           <br>
