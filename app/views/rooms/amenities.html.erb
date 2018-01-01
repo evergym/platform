@@ -1,70 +1,72 @@
-<div class="row">
-  <div class="col-md-3">
-    <%= render 'room_menu' %>
-    <br>
-  </div>
-  <div class="col-md-9">
-    <div class="panel panel-default">
-      <div class="panel-heading">Amenities</div>
-      <div class="panel-body">
-        <br>
-        <div class="container">
-          <%= form_for @room do |f| %>
-            <div class="row form-group">
-              <div class="col-md-4">
-                <%= f.check_box :is_weights %> Free weights / Machines
+<div class="container content">
+  <div class="row">
+    <div class="col-md-3">
+      <%= render 'room_menu' %>
+      <br>
+    </div>
+    <div class="col-md-9">
+      <div class="panel panel-default">
+        <div class="panel-heading">Amenities</div>
+        <div class="panel-body">
+          <br>
+          <div class="container">
+            <%= form_for @room do |f| %>
+              <div class="row form-group">
+                <div class="col-md-4">
+                  <%= f.check_box :is_weights %> Free weights / Machines
+                </div>
+                <div class="col-md-4">
+                  <%= f.check_box :is_lounge %> Lounge
+                </div>
+                <div class="col-md-4">
+                  <%= f.check_box :is_shower %> Shower
+                </div>
               </div>
-              <div class="col-md-4">
-                <%= f.check_box :is_lounge %> Lounge
-              </div>
-              <div class="col-md-4">
-                <%= f.check_box :is_shower %> Shower
-              </div>
-            </div>
 
-            <div class="row form-group">
-              <div class="col-md-4">
-                <%= f.check_box :is_towel %> Towel Service
+              <div class="row form-group">
+                <div class="col-md-4">
+                  <%= f.check_box :is_towel %> Towel Service
+                </div>
+                <div class="col-md-4">
+                  <%= f.check_box :is_yoga %> Yoga equipment
+                </div>
+                <div class="col-md-4">
+                  <%= f.check_box :is_cycling %> Spin Bikes
+                </div>
               </div>
-              <div class="col-md-4">
-                <%= f.check_box :is_yoga %> Yoga equipment
-              </div>
-              <div class="col-md-4">
-                <%= f.check_box :is_cycling %> Spin Bikes
-              </div>
-            </div>
 
-            <div class="row form-group">
-              <div class="col-md-4">
-                <%= f.check_box :is_pilates %> Pilates equipment
+              <div class="row form-group">
+                <div class="col-md-4">
+                  <%= f.check_box :is_pilates %> Pilates equipment
+                </div>
+                <div class="col-md-4">
+                  <%= f.check_box :is_pool %> Swimming Pool
+                </div>
+                <div class="col-md-4">
+                  <%= f.check_box :is_basketball %> Basketball Court
+                </div>
               </div>
-              <div class="col-md-4">
-                <%= f.check_box :is_pool %> Swimming Pool
-              </div>
-              <div class="col-md-4">
-                <%= f.check_box :is_basketball %> Basketball Court
-              </div>
-            </div>
 
-            <div class="row form-group">
-              <div class="col-md-4">
-                <%= f.check_box :is_childcare %> Childcare available
+              <div class="row form-group">
+                <div class="col-md-4">
+                  <%= f.check_box :is_childcare %> Childcare available
+                </div>
+                <div class="col-md-4">
+                  <%= f.check_box :is_internet %> Internet
+                </div>
+                <div class="col-md-4">
+                  <%= f.check_box :is_boxing %> Boxing equipment
+                </div>
               </div>
-              <div class="col-md-4">
-                <%= f.check_box :is_internet %> Internet
-              </div>
-              <div class="col-md-4">
-                <%= f.check_box :is_boxing %> Boxing equipment
-              </div>
-            </div>
-            <br/><br/>
+              <br/><br/>
 
-            <div class="text-center">
-              <%= f.submit "Save", class: "btn btn-submit" %>
-            </div>
-          <% end %>
+              <div class="text-center">
+                <%= f.submit "Save", class: "btn btn-submit" %>
+              </div>
+            <% end %>
+          </div>
         </div>
-      </div>
-    </div>  
+      </div>  
+    </div>
   </div>
 </div>
