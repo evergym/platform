@@ -203,6 +203,7 @@ body {
   box-shadow: none;
 }
 
+
 /* Separator */
 .or {
   display:flex;
@@ -231,13 +232,11 @@ hr {
 
 /* Panels */
 .panel.panel-default {
-  border-radius: 0px;
   box-shadow: none;
   border: 1px solid $border;
 }
 
 .panel.panel-default.img {
-  border-radius: 0.15em;
   background: none !important;
   border: none;
   overflow: hidden;
@@ -245,6 +244,16 @@ hr {
   -moz-box-shadow: none;
   -o-box-shadow: none;
   -webkit-box-shadow: none;
+}
+
+
+/* Cards */
+.card-img-left {
+  border-bottom-left-radius: calc(.25rem - 1px);
+  border-top-left-radius: calc(.25rem - 1px);
+  float: left;
+  padding-right: 1em;
+  margin-bottom: -1.25em;
 }
 
 
@@ -499,7 +508,6 @@ input[type="checkbox"]:checked:before {
 
 .panel-heading.preview img {
   width: 100%;
-  border-radius: 0.15em;
   margin: 0;
   overflow: hidden;
   background: transparent;
