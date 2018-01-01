@@ -503,4 +503,6 @@ input[type="checkbox"]:checked:before {
   margin: 0;
   overflow: hidden;
   background: transparent;
+  box-shadow: none;
+  margin-bottom: -5px;
 }
