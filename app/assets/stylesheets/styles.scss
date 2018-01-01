@@ -197,12 +197,11 @@ body {
 .btn.btn-default {
   border-radius: 0.25rem;
   font-size: 0.9em;
+  min-width: 100%;
   font-weight: 400;
-  &:hover {
-    background-color: $white;
-  }
+  background: $white;
+  box-shadow: none;
 }
-
 
 /* Separator */
 .or {
@@ -235,11 +234,17 @@ hr {
   border-radius: 0px;
   box-shadow: none;
   border: 1px solid $border;
-  
-  .panel-heading {
-    height: 50px;
-    padding: 15px;
-  }
+}
+
+.panel.panel-default.img {
+  border-radius: 0.25em;
+  background: none !important;
+  border: none;
+  overflow: hidden;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  -webkit-box-shadow: none;
 }
 
 
@@ -463,4 +468,39 @@ input[type="checkbox"]:checked:before {
   color: $dark;
   font-weight: bold;
   text-decoration: none;
+}
+
+
+/* PHOTO UPLOAD */
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: $white;
+  cursor: inherit;
+  display: block;
+}
+
+.panel-heading.preview {
+  padding: 0;
+}
+
+.panel-heading.preview img {
+  width: 100%;
+  border-radius: 0.25em;
+  margin: 0;
+  overflow: hidden;
+  background: transparent;
 }
