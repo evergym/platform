@@ -18,10 +18,16 @@
           <br>
 
           <div class="form-group">
-            <%= f.text_field :fullname, :class => "validate", :placeholder => "Name", class: "form-control", required: true %>
+            <%= f.text_field :first_name, :class => "validate", :placeholder => "First Name", class: "form-control", required: true %>
           </div>
 
           <br> 
+          
+          <div class="form-group">
+            <%= f.text_field :last_name, :class => "validate", :placeholder => "Last Name", class: "form-control", required: true %>
+          </div>
+          
+          <br>
            
           <div class="form-group">
             <%= f.email_field :email, :placeholder => "Email address", class: "form-control", required: true %>
