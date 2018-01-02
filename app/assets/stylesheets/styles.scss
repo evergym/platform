@@ -64,6 +64,18 @@ body {
   color: $primary;
 }
 
+.amenities li {
+  margin-bottom: 10px;
+  font-weight: bold;
+  list-style-type: none;
+}
+
+.amenities .text-line-through {
+  text-decoration: line-through;
+  color: $border;
+  font-size: 14px;
+}
+
 
 /* Alert */
 .alert {
@@ -100,6 +112,7 @@ body {
 /* Navbar */
 .navbar {
   background-color: $white;
+  margin-bottom: 0px;
   
   .dropdown-menu hr {
     margin: 8px;
@@ -203,6 +216,15 @@ body {
   box-shadow: none;
 }
 
+.btn.btn-update {
+  border-radius: 0.25rem;
+  font-size: 0.9em;
+  color: $white;
+  font-weight: 400;
+  background: $primary;
+  box-shadow: none;
+}
+
 
 /* Separator */
 .or {
@@ -244,6 +266,15 @@ hr {
   -moz-box-shadow: none;
   -o-box-shadow: none;
   -webkit-box-shadow: none;
+}
+
+.about-me {
+  font-size: 13px;
+  line-height: 0px;
+  
+  h5 {
+    font-weight: bold;
+  }
 }
 
 
