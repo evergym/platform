@@ -2,6 +2,9 @@ class Room < ApplicationRecord
   belongs_to :user
   has_many :photos
   
+  geocoded_by :address
+  after_validation :geocode, if: :address_changed?
+  
   validates :room_type, presence: true
   
   def cover_photo(size)
