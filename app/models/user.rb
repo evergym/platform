@@ -11,6 +11,7 @@ class User < ApplicationRecord
   validates :description, length: {maximum: 500}
   
   has_many :rooms
+  has_many :reservations
       
   def self.from_omniauth(auth)
     user = User.where(email: auth.info.email).first
