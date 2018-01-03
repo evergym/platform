@@ -8,17 +8,19 @@
       <!-- Listing Name -->  
       <div class="row">
         <div class="col-md-8">
-        <h2><%= @room.listing_name %></h2>
-        <%= @room.address %>
+          <h2><%= @room.listing_name %></h2>
+          <%= @room.address %>
+        </div>
+        <div class="col-md-4 text-center">
+          <br>
+          <%= image_tag avatar_url(@room.user), class: "img-circle avatar-large" %><br/><br/>
+          <%= @room.user.first_name %>
+        </div> 
       </div>
-      <div class="col-md-4 text-center">
-        <br>
-        <%= image_tag avatar_url(@room.user), class: "img-circle avatar-large" %><br/><br/>
-        <%= @room.user.first_name %>
-      </div> 
-      </div>
+      <br>
       <hr>
-      <!-- Room Info -->  
+      <!-- Room Info -->
+      <br>  
       <div class="row text-babu">
         <div class="row text-center row-space-1">
           <div class="col-md-3">
@@ -31,6 +33,7 @@
         </div>
 
       </div>
+      <br>
       <hr>
       <!-- About -->  
       <div class="row">
@@ -46,6 +49,7 @@
           <h4>Amenities</h4>
         </div>
 
+        <br>
         <div class="col-md-9">
           <div class="row">
             <div class="col-md-6">
@@ -139,6 +143,26 @@
 
             google.maps.event.addDomListener(window, 'load', initialize);
         </script>
+      </div>
+      <br>
+      <hr>
+      <!-- Nearby Gyms -->
+      <div class="row">
+        <h4>Nearby</h4>
+        <br>
+        <% for room in @room.nearbys(5).max(6).shuffle %>
+            <div class="col-md-4">
+              <div class="panel panel-default panel-gym">
+                <div class="panel-heading preview">
+                  <%= image_tag room.cover_photo(:medium) %>
+                </div>
+                <div class="panel-body">
+                  <h5><%= link_to room.listing_name, room %></h5>
+                  (<%= room.distance.round(2) %> miles away)
+                </div>
+              </div>
+            </div>
+        <% end %>
       </div>
     </div> 
     <!-- Right Panel -->
