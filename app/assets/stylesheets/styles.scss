@@ -289,6 +289,21 @@ hr {
   }
 }
 
+.panel.panel-default.panel-reservation {
+  span {
+    padding: 20px;
+  }
+  
+  h4 {
+    line-height: 0;
+    display: inline;
+  }
+  
+  hr {
+    margin-top: 0px;
+  }
+} 
+
 
 /* Cards */
 .card-img-left {
@@ -556,4 +571,27 @@ input[type="checkbox"]:checked:before {
   background: transparent;
   box-shadow: none;
   margin-bottom: -5px;
+}
+
+
+/* Reservations */
+// RESERVATIONS
+.reservation-table td {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid $border;
+  padding: 10px;
+}
+
+.reservation-table .total td {
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+}
+
+.form-control.datepicker {
+  color: $secondary;
+  background-color: white;
+  border: 1px solid $border;
+  text-align: center;
 }
