@@ -9,8 +9,17 @@
         <div class="panel panel-default">
           <div class="panel-heading">Verified info</div>
           <div class="panel-body">
-            Email Address <br>
-            Phone Number
+            <ul class="sidebar-list">
+              <% if @user.confirmation_token %>
+                <li>Email Address<span class="pull-right icon-babu"><i class="fa fa-check-circle-o"></i></span></li>
+                <br>
+              <% end %>
+              <% if @user.provider %>
+                <li>Facebook<span class="pull-right icon-babu"><i class="fa fa-check-circle-o"></i></span></li>
+                <br>
+              <% end %>
+              <li>Phone Number<span class="pull-right icon-babu"><i class="fa fa-check-circle-o"></i></span></li>
+            </ul>
           </div>
         </div>
         <br>
@@ -53,6 +62,17 @@
             <% end %>
           </div>
         </div>
+        <h4>Listings (<%= @rooms.length %>)</h4><br/>
+        <% @rooms.each do |room| %>
+          <div class="panel panel-default panel-gym">
+            <div class="panel-heading preview">
+              <%= image_tag room.cover_photo(:medium) %>
+            </div>
+            <div class="panel-body">
+              <h5><%= link_to room.listing_name, room %></h5>
+            </div> 
+          </div>
+        <% end %>
       </div>
       <div class="col-md-9">
         <h2>Hey, I'm <%= @user.first_name %>!</h2> 
