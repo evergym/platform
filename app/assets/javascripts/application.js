@@ -14,5 +14,6 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require jquery-ui/datepicker
+//= require jquery-ui/slider
 //= require moment
 //= require_tree .

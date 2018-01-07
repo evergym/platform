@@ -20,7 +20,7 @@
       <ul class="nav navbar-nav navbar-right">
 
         <% if (!user_signed_in?) %>
-          <li><a href="#">Become a host</a></li>
+          <li><%= link_to "Become a host", new_room_path %></li>
           <li><%= link_to "Sign Up", new_user_registration_path %></li>
           <li><%= link_to "Log In", new_user_session_path %></li>
         <% else %>
