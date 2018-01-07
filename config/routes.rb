@@ -24,6 +24,9 @@ Rails.application.routes.draw do
   
   resources :guest_reviews, only: [:create, :destroy]
   resources :host_reviews, only: [:create, :destroy]
+  
   get '/your_bookings' => 'reservations#your_bookings'
   get '/your_reservations' => 'reservations#your_reservations'
+  
+  get 'search' => 'pages#search'
 end
