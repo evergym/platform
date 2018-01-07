@@ -1,0 +1,23 @@
+<% rooms.each do |room| %>
+  <div class="col-md-4">
+    <div class="panel panel-default panel-gym">
+      <div class="panel-heading preview">
+        <%= link_to image_tag(room.cover_photo(:medium)), room %>
+      </div>
+      <div class="panel-body">
+        <h6><%= room.room_type %></h6>
+        <h5><%= link_to room.listing_name, room %></h5>
+        $<%= room.price %> per day
+        <small><div id="star_<%= room.id %>"><span class="pull-right"><%= (room.guest_reviews.count) %></span></div></small>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $('#star_<%= room.id %>').raty({
+      path: '/assets',
+      readOnly: true,
+      score: <%= room.average_rating %>
+    });
+  </script>
+<% end %>

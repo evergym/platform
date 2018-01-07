@@ -307,6 +307,17 @@ hr {
   a {
     color: $dark;
   }
+  
+  h5 {
+    margin-top: 0px;
+    margin-bottom: 5px;
+  }
+  
+  h6 {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    color: $secondary;
+  }
 }
 
 .panel.panel-default.panel-reservation {
