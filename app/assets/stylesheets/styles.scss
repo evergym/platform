@@ -80,6 +80,8 @@ body {
 /* Alert */
 .alert {
   border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
 }
 
 .alert {
@@ -95,6 +97,8 @@ body {
   list-style: none;
   border: 2px solid $primary;
   border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
 }
 
 
@@ -150,6 +154,8 @@ body {
 
 .navbar-default .navbar-toggle {
   border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
   border: none;
 } 
 
@@ -186,6 +192,8 @@ body {
 .btn.btn-submit {
   height: 3.0em;
   border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
   font-size: 16px;
   font-weight: 500;
   background-color: $primary !important;
@@ -200,6 +208,8 @@ body {
 .btn.btn-facebook {
   height: 3.0em;
   border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
   font-size: 16px;
   font-weight: 500;
   background-color: $facebook !important;
@@ -209,6 +219,8 @@ body {
 
 .btn.btn-default {
   border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
   font-size: 0.9em;
   min-width: 100%;
   font-weight: 400;
@@ -218,6 +230,8 @@ body {
 
 .btn.btn-update {
   border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
   font-size: 0.9em;
   color: $white;
   font-weight: 400;
@@ -286,6 +300,8 @@ hr {
   
   img {
     border-radius: 0.25em;
+    -webkit-border-radius: 0.25em;
+    -moz-border-radius: 0.25em;
   }
   
   a {
@@ -349,6 +365,8 @@ hr {
 
 .form-control {
   border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
   height: 4rem;
 }
 
@@ -376,6 +394,8 @@ hr {
   background-color: white;
   border: 1px solid $border;
   border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
   padding: 10px;
   appearance: none;
   -moz-appearance: none; /* Firefox */
@@ -400,6 +420,8 @@ hr {
   vertical-align: top;
   border: 1px solid $border;
   border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -420,6 +442,8 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
   height: 3.5em;
   border: 1px solid $border;
   border-radius: 0.25rem !important;
+  -webkit-border-radius: 0.25rem !important;
+  -moz-border-radius: 0.25rem !important;
   padding: 0.5em;
   box-shadow: none;
   letter-spacing: 0.5px;
@@ -436,6 +460,8 @@ input[type="submit"], .button {
   background: $primary;
   border: 2px solid $primary;
   border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
   width: auto;
   height: 3em;
   text-align: center;
@@ -468,6 +494,8 @@ select {
   height: 3em;
   border: 1px solid $border;
   border-radius: 0.25rem !important;
+  -webkit-border-radius: 0.25rem !important;
+  -moz-border-radius: 0.25rem !important;
   padding: 0.5em;
   box-shadow: none;
   letter-spacing: 0.5px;
@@ -496,6 +524,8 @@ input[type="checkbox"] {
   vertical-align: top;
   border: 1px solid $border;
   border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
   appearance: none;
   -moz-appearance: none; /* Firefox */
   -webkit-appearance: none; /* Safari and Chrome */
@@ -658,4 +688,15 @@ input[type="checkbox"]:checked:before {
   font-size: 16px;
   font-weight: 600;
   color: $primary;
+}
+
+.form-group.search {
+  box-shadow: 0 4px 8px 0 $border;
+  -moz-box-shadow: 0 4px 8px 0 $border;
+  -webkit-box-shadow: 0 4px 8px 0 $border;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  overflow: hidden;
+  background: $white;
 }
