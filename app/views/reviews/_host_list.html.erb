@@ -8,7 +8,7 @@
     <div class="row">
       <div class="col-md-3 text-center">
         <%= image_tag avatar_url(r.host), class: "img-circle avatar-medium" %><br/><br/>
-        <%= r.host.first_name, r.host %>
+        <%= link_to r.host.first_name, r.host %>
       </div>
       <div class="col-md-9">
         <div id="star_<%= r.id %>"></div>

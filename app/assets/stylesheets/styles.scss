@@ -604,3 +604,30 @@ input[type="checkbox"]:checked:before {
   font-size: 14px;
   padding-top: 10px;
 }
+
+
+/* HOME PAGE */
+.discovery-card {
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+}
+
+.banner {
+  h3 {
+    font-weight: bold;
+    margin-top: 0px;
+  }
+}
+
+.section.bordered {
+  padding-top: 50px;
+}
+
+.header {
+  color: $white;
+}
+
+.text-blue, .icon-blue {
+  color: $primary;
+}

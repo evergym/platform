@@ -1,5 +1,72 @@
-<div class="container content">
-  <h1>Pages#home</h1>
-  <p>Find me in app/views/pages/home.html.erb</p>  
+<div class="container content banner">
+  <h3 class="text-center"><span class="text-blue">Evergym</span> Train wherever you want.</h3>
+  <br><br>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <span class="pull-left"><%= image_tag("start.jpg", :height => "80", :alt => "gym") %></span>
+          <span class="text-center"><h5>For Gyms</h5></span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <span class="pull-left"><%= image_tag("trainer.jpg", :height => "80", :alt => "trainer") %></span>
+          <span class="text-center"><h5>For Trainers</h5></span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <span class="pull-left"><%= image_tag("host.jpg", :height => "80", :alt => "trainer") %></span>
+          <span class="text-center"><h5>For Clients and Guests</h5></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br>
+  
+  <!-- Gyms -->
+  <div><h3>Gyms</h3></div>
+  <br>
+  
+  <div class="row">
+  <% @rooms.each do |room| %>
+    <div class="col-md-4">
+      <div class="panel panel-default panel-gym">
+        <div class="panel-heading preview">
+          <%= link_to image_tag room.cover_photo(:medium) %>
+        </div>
+        <div class="panel-body">
+          <h5><%= link_to room.listing_name, room %></h5>
+        </div> 
+      </div>  
+    </div>    
+  <% end %>
+  </div>
 </div>
+
+<script>
+  $('#start_date').datepicker({
+    dateFormat: 'dd-mm-yy',
+    minDate: 0,
+    maxDate: '3m',
+    onSelect: function(selected) {
+      $('#end_date').datepicker("option", "minDate", selected);
+      $('#end_date').attr("disabled", false);
+    }
+  });
+
+  $('#end_date').datepicker({
+    dateFormat: 'dd-mm-yy',
+    minDate: 0,
+    maxDate: '3m',
+    onSelect: function(selected) {
+      $('#start_date').datepicker("option", "maxDate", selected);
+    }
+  });
+</script>
 
