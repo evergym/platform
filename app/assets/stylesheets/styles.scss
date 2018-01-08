@@ -116,11 +116,21 @@ body {
 /* Navbar */
 .navbar {
   background-color: $white;
-  margin-bottom: 0px;
   
   .dropdown-menu hr {
     margin: 8px;
   }
+}
+
+.navbar-default {
+  background-color: $white !important;
+  border-radius: 0px;
+  border: none;
+  border-bottom: 1px solid $border;
+}
+
+.navbar-default.dashboard {
+  margin-top: -10px;
 }
 
 .navbar .navbar-nav li a {
