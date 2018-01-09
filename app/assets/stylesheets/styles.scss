@@ -669,6 +669,13 @@ input[type="checkbox"]:checked:before {
     font-weight: bold;
     margin-top: 0px;
   }
+  a {
+    color: $dark;
+  }
+  a:hover {
+    color: $dark;
+    text-decoration: none;
+  }
 }
 
 .section.bordered {
