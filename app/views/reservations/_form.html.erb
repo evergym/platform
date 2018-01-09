@@ -1,6 +1,6 @@
 <div class="panel panel-default panel-reservation">
   <br>
-  <span class="reservation"><i class="fa fa-bolt" style="color: #fbbc05"></i>&nbsp;<h4>$<%= @room.price %></h4> per day</span>
+  <span class="reservation"><% if @room.Instant? %><i class="fa fa-bolt" style="color: #fbbc05"></i> <% end %>&nbsp;<h4>$<%= @room.price %></h4> per day</span>
   <div class="panel-body">
     <hr>
     <%= form_for([@room, @room.reservations.new]) do |f| %>
@@ -36,7 +36,11 @@
       </div>
       
       <br>
-      <%= f.submit "Book Now", id: "btn_book", class: "btn btn-submit btn-block", disabled: true %>
+      <% if @room.Instant? %>
+          <%= f.submit "Book Now", id: "btn_book", class: "btn btn-submit btn-block", disabled: true %>
+      <% else %>
+          <%= f.submit "Request Now", id: "btn_book", class: "btn btn-submit btn-block", disabled: true %>
+      <% end %>
     <% end %> 
   </div>
 </div>
