@@ -357,6 +357,10 @@ hr {
 
 
 /* Avatar */
+.avatar-tiny {
+  width: 20px;
+  border: 1px solid $border;
+}
 .avatar-small {
   width: 35px;
   border: 2px solid $border;
@@ -727,4 +731,37 @@ input[type="checkbox"]:checked:before {
   -moz-border-radius: 0.25rem;
   overflow: hidden;
   background: $white;
+}
+
+
+/* CALENDAR */
+/* CALENDAR */
+.fc-content.Waiting {
+  background-color: $tertiary;
+}
+
+.fc-past {
+  background-color: lightgrey;
+}
+
+.fc-day {
+  position: relative;
+}
+
+.fc-content {
+  background-color: $secondary;
+  height: 35px;
+  border-radius: 50px;
+}
+
+.fc-event {
+  border: none !important;
+  background-color: transparent !important;
+}
+
+.fc-title {
+  font-size: 14px;
+  position: relative;
+  top: 7px;
+  left: 20px;
 }
