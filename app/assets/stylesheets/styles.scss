@@ -771,3 +771,76 @@ input[type="checkbox"]:checked:before {
   bottom: 2px;
   right: 2px;
 }
+
+.badge {
+  background-color: $primary;
+  position: relative;
+  top: -10px;
+  left: -5px;
+}
+
+#add-card form {
+  width: 480px;
+  margin: 20px auto;
+}
+
+#add-card label {
+  position: relative;
+  color: $medium;
+  font-weight: 400;
+  height: 40px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+#add-card label > span {
+  float: left;
+}
+
+.field {
+  background: white;
+  box-sizing: border-box;
+  font-weight: 400;
+  border: 1px solid $border;
+  border-radius: 0.25rem !important;
+  outline: none;
+  height: 40px !important;
+  padding: 10px 20px;
+  cursor: text;
+  width: 76%;
+  float: right;
+}
+
+.field::-webkit-input-placeholder { color: $light; }
+.field::-moz-placeholder { color: $light; }
+.field:-ms-input-placeholder { color: $light; }
+
+.field:focus,
+.field.StripeElement--focus {
+  border: 1px solid $secondary !important;
+  box-shadow: none !important;
+  outline: 0 none;
+  background-color: $white;
+}
+
+.outcome {
+  float: left;
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 20px;
+  min-height: 20px;
+  text-align: center;
+}
+
+.success, .error {
+  display: none;
+  font-size: 13px;
+}
+
+.success.visible, .error.visible {
+  display: inline;
+}
+
+.error {
+  color: $quaternary;
+}
