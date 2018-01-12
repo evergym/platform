@@ -786,7 +786,7 @@ input[type="checkbox"]:checked:before {
 
 #add-card label {
   position: relative;
-  color: $medium;
+  color: $dark;
   font-weight: 400;
   height: 40px;
   margin-bottom: 10px;
@@ -811,9 +811,9 @@ input[type="checkbox"]:checked:before {
   float: right;
 }
 
-.field::-webkit-input-placeholder { color: $light; }
-.field::-moz-placeholder { color: $light; }
-.field:-ms-input-placeholder { color: $light; }
+.field::-webkit-input-placeholder { color: #CFD7DF; }
+.field::-moz-placeholder { color: #CFD7DF; }
+.field:-ms-input-placeholder { color: #CFD7DF; }
 
 .field:focus,
 .field.StripeElement--focus {
