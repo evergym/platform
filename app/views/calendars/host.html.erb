@@ -15,12 +15,23 @@
         <%= f.hidden_field :start_date, id: "start-date", value: params[:start_date], onchange: "$(this.form).submit()" %>
       <% end %>
     </div>
-  <% end %>
+  
   
   <br>
   <%= render 'form' %>
   
-  <div id="calendar"></div> 
+  <div id="calendar"></div>
+  <% else %>
+    <div class="container content">
+      <div class="col-md-offset-3 col-md-6 text-center">
+        <h3>You don't have any listings.</h3>
+        <a href="/rooms/new" role="button" class="text-babu">
+          <i class="fa fa-plus-circle fa-3x"></i>
+        </a>
+      </div>
+    </div>
+  <% end %>
+  
 </div>
 
 
