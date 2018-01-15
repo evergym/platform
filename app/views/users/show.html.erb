@@ -4,6 +4,10 @@
       <div class="col-md-3">
         <div class="center">
           <%= image_tag avatar_url(@user), class: "avatar-full" %>
+          <% if current_user && current_user != @user %>
+            <br><br>
+            <%= link_to "Send Message", conversations_path(sender_id: current_user.id, recipient_id: @user.id), method: :post, class: "btn btn-default" %>
+          <% end %>
         </div>
         <br><br>
         <div class="panel panel-default">
@@ -12,13 +16,12 @@
             <ul class="sidebar-list">
               <% if @user.confirmation_token %>
                 <li>Email Address<span class="pull-right icon-babu"><i class="fa fa-check-circle-o"></i></span></li>
-                <br>
               <% end %>
               <% if @user.provider %>
                 <li>Facebook<span class="pull-right icon-babu"><i class="fa fa-check-circle-o"></i></span></li>
-                <br>
               <% end %>
               <% if current_user.phone_verified %>
+                <br>
                 <li>Phone Number<span class="pull-right icon-babu"><i class="fa fa-check-circle-o"></i></span></li>
               <% end %>
             </ul>
