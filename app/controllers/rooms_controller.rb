@@ -76,14 +76,20 @@ class RoomsController < ApplicationController
   # --- Reservations ---
   def preload
     today = Date.today
-    reservations = @room.reservations.where("(start_date >= ? OR end_date >= ?) AND status = ?", today, today, 1)
+    unavailable_dates = @room.calendars.where("status = ? AND day > ?", 1, today)
+    
+    special_dates = @room.calendars.where("status = ? AND day > ? AND price <> ?",0, today, @room.price)
 
-    render json: reservations
+    render json: {
+        unavailable_dates: unavailable_dates,
+        special_dates: special_dates
+    }
   end
   
   private
     def is_conflict(start_date, end_date, room)
-      check = room.reservations.where("(? < start_date AND end_date < ?) AND status = ?", start_date, end_date, 1)
+      check = room.calendars.where("day BETWEEN ? AND ? AND status = ?", start_date, end_date, 1).limit(1)
+
       check.size > 0? true : false
     end
     
