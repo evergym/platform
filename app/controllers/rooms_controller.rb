@@ -76,6 +76,7 @@ class RoomsController < ApplicationController
   # --- Reservations ---
   def preload
     today = Date.today
+    
     unavailable_dates = @room.calendars.where("status = ? AND day > ?", 1, today)
     
     special_dates = @room.calendars.where("status = ? AND day > ? AND price <> ?",0, today, @room.price)
