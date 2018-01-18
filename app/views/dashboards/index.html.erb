@@ -25,14 +25,6 @@
       
     </div>
     <div class="col-md-9">
-      <!-- Notification -->
-      <div class="panel panel-default">
-        <div class="panel-heading">Notifications</div>
-        <div class="panel-body">
-          
-        </div>
-      </div>
-      <br>
       <h4>Your Listings (<%= @rooms.length %>)</h4><br/>
       <div class="row" id="room_listing">
         <%= render partial: "rooms/rooms_list", locals: {rooms: @rooms} %>
