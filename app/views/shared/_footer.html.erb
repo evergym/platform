@@ -1,12 +1,12 @@
 <footer class="footer">
   <div class="container">
-    <ul class="nav navbar-nav navbar-left">
+    <ul class="navbar-nav navbar-left">
       <li>&copy; 2018 Evergym, Inc.</li>
-      <li>Terms</li>
-      <li>Privacy</li>
+      <li><%= link_to 'Terms', terms_path %></li>
+      <li><%= link_to 'Privacy', terms_privacy_policy_path %></li>
     </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li>Hosts</li>
+    <ul class="navbar-nav navbar-right">
+      <li><%= link_to 'Hosts', host_path %></li>
       <li>Trainers</li>
       <li>Guests</li>
     </ul>

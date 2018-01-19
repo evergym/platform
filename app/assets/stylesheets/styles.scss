@@ -844,3 +844,173 @@ input[type="checkbox"]:checked:before {
 .error {
   color: $quaternary;
 }
+
+
+/* Terms */
+
+.terms {
+  background-color: $white;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-right: 40px;
+  padding-left: 40px;
+  min-height: 750px;
+  margin-top: -20px;
+  
+  h1 {
+    font-size: 2.2em;
+  }
+  
+  .no-bullet li {
+    list-style: none;
+  }
+  
+  h5 {
+    font-weight: bolder;
+  }
+}
+
+
+/* Host */
+.host {
+  background-image: url('host.jpg'); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  min-height: 750px;
+  margin-top: -20px;
+  margin-bottom: -20px;
+  width: 100%;
+}
+
+.host-header {
+  color: $black;
+  padding-top: 200px;
+  
+  h4 {
+    font-size: 1em;
+    font-weight: 500px;
+  }
+}
+
+.capital {
+  text-transform: uppercase;
+}
+
+.why-host {
+  background-color: $white;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 40px;
+  padding-right: 40px;
+  
+  p {
+    font-size: 1.1em;
+    font-weight: 300;
+  }
+}
+
+.how-to {
+  background-color: $white;
+  min-height: 750px;
+  border-top: 1px solid $border;
+  border-bottom: 1px solid $border;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-right: 40px;
+  padding-left: 40px;
+  
+  h1 {
+    font-size: 2.2em;
+  }
+  
+  h2 {
+    font-size: 2.0em;
+  }
+  
+  p {
+    font-size: 1.2em;
+    font-weight: lighter;
+  }
+  
+  .pic {
+    padding-bottom: 50px;
+  }
+}
+
+.align-left {
+  float: left;
+}
+
+.align-right {
+  float: right;
+}
+
+.number {
+  font-size: 3em;
+  color: $tertiary;
+  font-weight: lighter;
+}
+
+.start-hosting {
+  background-image: url('start.jpg'); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  height: 600px;
+  margin-top: -20px;
+  margin-bottom: -100px;
+  
+  h1 {
+    font-size: 2.3em;
+    color: $white;
+    padding-top: 200px;
+  }
+}
+
+.btn.btn-start {
+  border: 2px solid $primary;
+  border-radius: 0.25rem;
+  background-color: $primary !important;
+  color: $white;
+  padding: 10px 25px 10px 25px;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.btn.btn-start:hover {
+  background: $primary;
+  color: $white;
+}
+
+.faq-list {
+  background-color: $white;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  padding-right: 40px;
+  padding-left: 40px;
+  
+  h1 {
+    font-size: 2.2em;
+  }
+  
+  .panel {
+    box-shadow: none;
+  }
+  
+  .panel-heading {
+    border: none;
+  }
+  
+  h3 {
+    text-transform: uppercase;
+  }
+  
+  .panel-title {
+    color: $secondary;
+  }
+}
