@@ -1,7 +1,7 @@
 class ReservationsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_reservation, only: [:approve, :decline]
-  
+
   def create
     room = Room.find(params[:room_id])
 
@@ -44,15 +44,15 @@ class ReservationsController < ApplicationController
     end
     redirect_to room
   end
-  
-  def your_bookings
-    @bookings = current_user.reservations.order(start_date: :asc)
+
+  def your_trips
+    @trips = current_user.reservations.order(start_date: :asc)
   end
-  
+
   def your_reservations
     @rooms = current_user.rooms
   end
-  
+
   def approve
     charge(@reservation.room, @reservation)
     redirect_to your_reservations_path
@@ -62,17 +62,18 @@ class ReservationsController < ApplicationController
     @reservation.Declined!
     redirect_to your_reservations_path
   end
-  
+
   private
+
     def send_sms(room, reservation)
       @client = Twilio::REST::Client.new
       @client.messages.create(
         from: '+12017304620',
         to: room.user.phone_number,
-        body: "#{reservation.user.first_name} #{reservation.user.last_name} booked '#{room.listing_name}'"
+        body: "#{reservation.user.fullname} booked '#{room.listing_name}'"
       )
     end
-  
+
     def charge(room, reservation)
       if !reservation.user.stripe_id.blank?
         customer = Stripe::Customer.retrieve(reservation.user.stripe_id)
@@ -94,18 +95,18 @@ class ReservationsController < ApplicationController
           flash[:notice] = "Reservation created successfully!"
         else
           reservation.Declined!
-          flash[:alert] = "Cannot charge with this payment method."
+          flash[:alert] = "Cannot charge with this payment method!"
         end
       end
     rescue Stripe::CardError => e
       reservation.declined!
       flash[:alert] = e.message
     end
-  
+
     def set_reservation
       @reservation = Reservation.find(params[:id])
     end
-  
+
     def reservation_params
       params.require(:reservation).permit(:start_date, :end_date)
     end
